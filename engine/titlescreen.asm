@@ -387,9 +387,9 @@ INCLUDE "data/title_mons.asm"
 
 ; prints version text (red, blue)
 PrintGameVersionOnTitleScreen:
-	coord hl, 7, 8
-	ld de, VersionOnTitleScreenText
-	jp PlaceString
+;	coord hl, 7, 8
+;	ld de, VersionOnTitleScreenText
+;	jp PlaceString
 
 ; these point to special tiles specifically loaded for that purpose and are not usual text
 VersionOnTitleScreenText:
