@@ -5031,8 +5031,9 @@ INCLUDE "engine/overworld/is_player_just_outside_map.asm"
 INCLUDE "engine/menu/status_screen.asm"
 INCLUDE "engine/menu/party_menu.asm"
 
-RedPicFront:: INCBIN "pic/gstrainer/red.pic"
-;RedPicFront:: INCBIN "pic/gsmon/pikachu.pic"
+;RedPicFront:: INCBIN "pic/gstrainer/red.pic"
+RedPicFront:: INCBIN "pic/other/pikachu.pic"
+;RedPicFront:: INCBIN "pic/other/pikachu_trainer.pic"
 ShrinkPic1::  INCBIN "pic/trainer/shrink1.pic"
 ShrinkPic2::  INCBIN "pic/trainer/shrink2.pic"
 
