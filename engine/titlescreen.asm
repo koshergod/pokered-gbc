@@ -188,7 +188,7 @@ ENDC
 	call PlaySound
 
 ; scroll game version in from the right
-	call PrintGameVersionOnTitleScreen
+;	call PrintGameVersionOnTitleScreen
 	ld a, SCREEN_HEIGHT_PIXELS
 	ld [hWY], a
 	ld d, 144
@@ -208,7 +208,7 @@ ENDC
 	ld a, vBGMap1 / $100
 	call TitleScreenCopyTileMapToVRAM
 	call LoadScreenTilesFromBuffer2
-	call PrintGameVersionOnTitleScreen
+;	call PrintGameVersionOnTitleScreen
 	call Delay3
 	call WaitForSoundToFinish
 	ld a, MUSIC_TITLE_SCREEN
@@ -354,7 +354,7 @@ ClearBothBGMaps:
 LoadTitleMonSprite:
 	ld [wcf91], a
 	ld [wd0b5], a
-	coord hl, 5, 10
+	coord hl, 3, 10 ;default=5,10
 	call GetMonHeader
 	jp LoadFrontSpriteByMonIndex
 
@@ -390,6 +390,7 @@ PrintGameVersionOnTitleScreen:
 ;	coord hl, 7, 8
 ;	ld de, VersionOnTitleScreenText
 ;	jp PlaceString
+ret
 
 ; these point to special tiles specifically loaded for that purpose and are not usual text
 VersionOnTitleScreenText:
